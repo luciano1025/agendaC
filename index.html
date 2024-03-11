@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="numeros, telefone, celular">
+    <meta name="description" content="cadastre seu contato!">
+    <meta name="author" content="LR">
+    <title>Lista de contatos</title>
+    <link rel="stylesheet" href="./index.css">
+    <h1>Adicione seu número de celular aqui!</h1>
+</head>
+<hr>
+<body>
+    <form id="cadastro">
+        <label class="four" for="nome">Seu nome-sobrenome:</label>
+        <input type="text" oninput="validarNome(this)" id="nome" placeholder="Ex: Paulo Nordel" required>
+        <label class="four" for="numero">Seu N° celular:</label>
+        <input type="number" oninput="validarNumeros()" id="numero" placeholder="Ex: (DDD) 9 12345678" required min="0">
+        <button onclick="adicionarNaTabela()" id="botao" type="submit">Adicionar</button>
+    </form>
+    <h2 style="color: yellow;">Lista de contatos</h2>
+    <div>
+        <table id="tabelas">
+            <thead>
+                <tr>
+                    <th id="no">Nomes</th>
+                    <th id="nu">Números</th>
+                    <th id="ap">Apagar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="sublinhada">
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    &copy;<sub>Criado por "Luciano R."</sub>
+    <script src="./main.js"></script>
+</body>
+</html>
